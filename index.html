@@ -1,0 +1,1215 @@
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Sewa Bot WhatsApp Premium</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #ebf4ff 0%, #e0e7ff 100%);
+      color: #1f2937;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      line-height: 1.5;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      scroll-behavior: smooth;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    a:focus-visible {
+      outline: 2px solid #2563eb;
+      outline-offset: 2px;
+    }
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+    h1, h2, h3, h4 {
+      margin: 0;
+    }
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    button {
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+    button:focus-visible {
+      outline: 2px solid #2563eb;
+      outline-offset: 2px;
+    }
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .flex {
+      display: flex;
+    }
+    .flex-col {
+      flex-direction: column;
+    }
+    .flex-row {
+      flex-direction: row;
+    }
+    .items-center {
+      align-items: center;
+    }
+    .justify-between {
+      justify-content: space-between;
+    }
+    .justify-center {
+      justify-content: center;
+    }
+    .gap-4 {
+      gap: 1rem;
+    }
+    .gap-3 {
+      gap: 0.75rem;
+    }
+    .gap-6 {
+      gap: 1.5rem;
+    }
+    .gap-8 {
+      gap: 2rem;
+    }
+    .space-x-4 > * + * {
+      margin-left: 1rem;
+    }
+    .space-x-6 > * + * {
+      margin-left: 1.5rem;
+    }
+    .space-y-6 > * + * {
+      margin-top: 1.5rem;
+    }
+    @media (min-width: 768px) {
+      .md\:flex-row {
+        flex-direction: row;
+      }
+      .md\:flex {
+        display: flex;
+      }
+      .md\:space-x-6 > * + * {
+        margin-left: 1.5rem;
+      }
+      .md\:grid-cols-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .md\:grid-cols-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+      .md\:mb-0 {
+        margin-bottom: 0;
+      }
+      .md\:w-1\/2 {
+        width: 50%;
+      }
+      .md\:w-auto {
+        width: auto;
+      }
+      .md\:mt-0 {
+        margin-top: 0;
+      }
+      .md\:px-0 {
+        padding-left: 0;
+        padding-right: 0;
+      }
+      .md\:pt-0 {
+        padding-top: 0;
+      }
+      .md\:pb-0 {
+        padding-bottom: 0;
+      }
+      .md\:hidden {
+        display: none;
+      }
+      .md\:block {
+        display: block;
+      }
+    }
+    .grid {
+      display: grid;
+    }
+    .grid-cols-1 {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+    .lg\:grid-cols-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    .gap-8 {
+      gap: 2rem;
+    }
+    header {
+      background: linear-gradient(90deg, #2563eb 0%, #4f46e5 100%);
+      color: white;
+      padding: 1.25rem 1.5rem;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+    }
+    header .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .logo-bg {
+      background-color: white;
+      padding: 0.5rem;
+      border-radius: 9999px;
+      box-shadow: 0 2px 8px rgb(0 0 0 / 0.15);
+      flex-shrink: 0;
+    }
+    .logo-bg img {
+      border-radius: 9999px;
+      width: 40px;
+      height: 40px;
+      object-fit: cover;
+    }
+    header h1 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      user-select: none;
+    }
+    #burgerBtn {
+      font-size: 1.5rem;
+      color: white;
+      background: none;
+      border: none;
+      cursor: pointer;
+      display: block;
+    }
+    @media (min-width: 768px) {
+      #burgerBtn {
+        display: none;
+      }
+    }
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 16rem;
+      height: 100vh;
+      background: linear-gradient(90deg, #2563eb 0%, #4f46e5 100%);
+      color: white;
+      transform: translateX(-100%);
+      transition: transform 0.3s ease-in-out;
+      padding-top: 5rem;
+      z-index: 40;
+      overflow-y: auto;
+    }
+    nav.open {
+      transform: translateX(0);
+    }
+    nav ul {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+      margin: 0;
+    }
+    nav ul li a {
+      display: block;
+      padding: 0.5rem 0.5rem;
+      border-radius: 0.375rem;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+      user-select: none;
+    }
+    nav ul li a:hover,
+    nav ul li a:focus-visible {
+      background-color: #1e40af;
+      text-decoration: underline;
+      outline: none;
+    }
+    @media (min-width: 768px) {
+      nav {
+        position: static;
+        width: auto;
+        height: auto;
+        background: transparent;
+        transform: none !important;
+        padding-top: 0;
+        overflow: visible;
+      }
+      nav ul {
+        flex-direction: row;
+        gap: 1.5rem;
+        padding-left: 0;
+        padding-right: 0;
+      }
+      nav ul li a {
+        padding: 0.25rem 0.5rem;
+        background: transparent;
+        text-decoration: none;
+        color: white;
+      }
+      nav ul li a:hover,
+      nav ul li a:focus-visible {
+        background-color: rgba(255 255 255 / 0.2);
+        text-decoration: underline;
+      }
+    }
+    section#tentang {
+      padding: 5rem 1.5rem;
+    }
+    .hero-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 3rem;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @media (min-width: 768px) {
+      .hero-container {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+      }
+    }
+    .hero-text {
+      width: 100%;
+      max-width: 600px;
+      text-align: center;
+    }
+    @media (min-width: 768px) {
+      .hero-text {
+        text-align: left;
+        width: 50%;
+      }
+    }
+    .hero-text h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      color: #3730a3;
+      line-height: 1.1;
+    }
+    .hero-text h2 span {
+      color: #2563eb;
+    }
+    .hero-text p {
+      font-size: 1.125rem;
+      margin-bottom: 2rem;
+      color: #374151;
+    }
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+    @media (min-width: 768px) {
+      .hero-buttons {
+        justify-content: flex-start;
+      }
+    }
+    .btn-primary {
+      background-color: #2563eb;
+      color: white;
+      font-weight: 700;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.75rem;
+      box-shadow: 0 10px 15px -3px rgb(37 99 235 / 0.5);
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      user-select: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .btn-primary:hover,
+    .btn-primary:focus-visible {
+      background-color: #1e40af;
+      outline: none;
+      transform: scale(1.05);
+    }
+    .btn-secondary {
+      background-color: white;
+      color: #2563eb;
+      font-weight: 700;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.75rem;
+      box-shadow: 0 10px 15px -3px rgb(37 99 235 / 0.3);
+      border: 2px solid #2563eb;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      user-select: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .btn-secondary:hover,
+    .btn-secondary:focus-visible {
+      background-color: #f3f4f6;
+      outline: none;
+      transform: scale(1.05);
+    }
+    .hero-image-wrapper {
+      position: relative;
+      width: 100%;
+      max-width: 384px;
+      height: auto;
+      display: flex;
+      justify-content: center;
+    }
+    .hero-image-glow {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 256px;
+      height: 256px;
+      background-color: #2563eb;
+      border-radius: 9999px;
+      filter: blur(40px);
+      opacity: 0.2;
+      transform: translate(-50%, -50%);
+      z-index: 0;
+    }
+    .hero-image {
+      border-radius: 1rem;
+      box-shadow: 0 10px 30px rgb(37 99 235 / 0.3);
+      position: relative;
+      z-index: 1;
+      max-height: 384px;
+      object-fit: cover;
+      width: 100%;
+      height: auto;
+    }
+    section#menu-bot {
+      padding: 4rem 1.5rem;
+      background-color: white;
+    }
+    section#menu-bot h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 3rem;
+      text-align: center;
+      color: #2563eb;
+    }
+    section#menu-bot h2 span {
+      color: #2563eb;
+    }
+    .menu-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @media (min-width: 768px) {
+      .menu-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (min-width: 1024px) {
+      .menu-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    .menu-card {
+      background: linear-gradient(135deg, #ebf4ff 0%, #e0e7ff 100%);
+      padding: 1.5rem;
+      border-radius: 1rem;
+      box-shadow: 0 4px 6px rgb(0 0 0 / 0.1);
+      transition: box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      user-select: none;
+    }
+    .menu-card:hover,
+    .menu-card:focus-within {
+      box-shadow: 0 10px 15px rgb(0 0 0 / 0.2);
+      outline: none;
+    }
+    .menu-card-header {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 1rem;
+      gap: 1rem;
+    }
+    .menu-icon {
+      background-color: #2563eb;
+      color: white;
+      padding: 0.75rem;
+      border-radius: 0.75rem;
+      font-size: 1.25rem;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+    }
+    .menu-card-header h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+      color: #1e40af;
+    }
+    .menu-card-header p {
+      color: #374151;
+      font-size: 0.9375rem;
+      line-height: 1.3;
+    }
+    .menu-card img {
+      border-radius: 0.75rem;
+      object-fit: cover;
+      height: 160px;
+      width: 100%;
+      margin-top: auto;
+      user-select: none;
+    }
+    section#keunggulan {
+      padding: 4rem 1.5rem;
+      background: linear-gradient(135deg, #e0e7ff 0%, #ebf4ff 100%);
+    }
+    section#keunggulan h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 3rem;
+      text-align: center;
+      color: #2563eb;
+    }
+    section#keunggulan h2 span {
+      color: #2563eb;
+    }
+    .features-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @media (min-width: 768px) {
+      .features-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    .feature-card {
+      background-color: white;
+      padding: 1.5rem;
+      border-radius: 1rem;
+      box-shadow: 0 4px 6px rgb(0 0 0 / 0.1);
+      transition: box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      user-select: none;
+    }
+    .feature-card:hover,
+    .feature-card:focus-within {
+      box-shadow: 0 10px 15px rgb(0 0 0 / 0.2);
+      outline: none;
+    }
+    .feature-icon {
+      color: #2563eb;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .feature-card h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: #1e40af;
+    }
+    .feature-card p {
+      color: #374151;
+      font-size: 1rem;
+      line-height: 1.4;
+    }
+    section#paket {
+      padding: 4rem 1.5rem;
+    }
+    section#paket h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 3rem;
+      text-align: center;
+      color: #2563eb;
+    }
+    section#paket h2 span {
+      color: #2563eb;
+    }
+    .paket-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @media (min-width: 768px) {
+      .paket-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    .card {
+      background-color: white;
+      border-radius: 1rem;
+      box-shadow: 0 4px 6px rgb(0 0 0 / 0.1);
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 400px;
+      cursor: default;
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+      user-select: none;
+      position: relative;
+    }
+    .card:hover,
+    .card:focus-within {
+      box-shadow: 0 10px 15px rgb(0 0 0 / 0.2);
+      transform: translateY(-5px);
+      outline: none;
+    }
+    .card.popular {
+      border: 2px solid #2563eb;
+    }
+    .card-header {
+      text-align: center;
+      margin-bottom: 1rem;
+      position: relative;
+    }
+    .card-popular-label {
+      position: absolute;
+      top: -1.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #2563eb;
+      color: white;
+      padding: 0.25rem 1rem;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      user-select: none;
+    }
+    .card-icon {
+      background-color: #2563eb;
+      color: white;
+      width: 64px;
+      height: 64px;
+      border-radius: 9999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin: 0 auto 0.75rem auto;
+      flex-shrink: 0;
+    }
+    .price {
+      font-size: 2.25rem;
+      font-weight: 700;
+      color: #2563eb;
+      margin: 1rem 0 0.25rem 0;
+      text-align: center;
+      user-select: text;
+    }
+    .duration {
+      text-align: center;
+      color: #4b5563;
+      font-weight: 600;
+      user-select: text;
+    }
+    .description {
+      text-align: center;
+      color: #6b7280;
+      margin-bottom: 1rem;
+      user-select: text;
+    }
+    .benefits {
+      list-style: none;
+      padding-left: 0;
+      margin-top: 1rem;
+      color: #374151;
+      flex-grow: 1;
+      overflow-y: auto;
+      user-select: text;
+    }
+    .benefits li {
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .benefits li i {
+      color: #2563eb;
+      flex-shrink: 0;
+      font-size: 1rem;
+      line-height: 1;
+    }
+    .benefits::-webkit-scrollbar {
+      width: 6px;
+    }
+    .benefits::-webkit-scrollbar-thumb {
+      background-color: rgba(37, 99, 235, 0.5);
+      border-radius: 3px;
+    }
+    .benefits::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    .benefits {
+      scrollbar-width: thin;
+      scrollbar-color: rgba(37, 99, 235, 0.5) transparent;
+    }
+    @supports (-ms-overflow-style: none) {
+      .benefits {
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+      }
+    }
+    .btn-order {
+      background-color: #2563eb;
+      color: white;
+      font-weight: 700;
+      padding: 0.5rem 1.5rem;
+      border-radius: 0.75rem;
+      text-align: center;
+      margin-top: 1rem;
+      transition: background-color 0.3s ease;
+      display: block;
+      width: fit-content;
+      margin-left: auto;
+      margin-right: auto;
+      user-select: none;
+    }
+    .btn-order:hover,
+    .btn-order:focus-visible {
+      background-color: #1e40af;
+      outline: none;
+    }
+    section.testimonial-section {
+      padding: 4rem 1.5rem;
+      background-color: white;
+    }
+    section.testimonial-section h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 3rem;
+      text-align: center;
+      color: #2563eb;
+    }
+    section.testimonial-section h2 span {
+      color: #2563eb;
+    }
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @media (min-width: 768px) {
+      .testimonial-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    .testimonial-card {
+      background: linear-gradient(135deg, #ebf4ff 0%, #e0e7ff 100%);
+      padding: 1.5rem;
+      border-radius: 1rem;
+      box-shadow: 0 4px 6px rgb(0 0 0 / 0.1);
+      user-select: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .testimonial-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .testimonial-header img {
+      width: 48px;
+      height: 48px;
+      border-radius: 9999px;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+    .testimonial-header h4 {
+      font-weight: 700;
+      font-size: 1rem;
+      margin: 0;
+      color: #1e40af;
+    }
+    .testimonial-header p {
+      font-size: 0.875rem;
+      color: #4b5563;
+      margin: 0;
+      user-select: text;
+    }
+    .testimonial-text {
+      color: #374151;
+      font-size: 1rem;
+      line-height: 1.4;
+      user-select: text;
+      flex-grow: 1;
+    }
+    .testimonial-stars {
+      color: #fbbf24;
+      font-size: 1.25rem;
+      display: flex;
+      gap: 0.25rem;
+      user-select: none;
+    }
+    section#kontak {
+      padding: 4rem 1.5rem;
+      background: linear-gradient(135deg, #2563eb 0%, #4f46e5 100%);
+      color: white;
+      user-select: none;
+    }
+    section#kontak .container {
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+    section#kontak h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+    }
+    section#kontak p.lead {
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      color: #d1d5db;
+    }
+    .contact-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @media (min-width: 768px) {
+      .contact-buttons {
+        flex-direction: row;
+        justify-content: center;
+      }
+    }
+    .btn-whatsapp {
+      background-color: white;
+      color: #2563eb;
+      font-weight: 700;
+      padding: 0.75rem 2rem;
+      border-radius: 0.75rem;
+      box-shadow: 0 10px 15px rgb(255 255 255 / 0.5);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      transition: background-color 0.3s ease;
+      user-select: none;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .btn-whatsapp:hover,
+    .btn-whatsapp:focus-visible {
+      background-color: #e0e7ff;
+      outline: none;
+    }
+    .btn-email {
+      background-color: #3b82f6;
+      color: white;
+      font-weight: 700;
+      padding: 0.75rem 2rem;
+      border-radius: 0.75rem;
+      box-shadow: 0 10px 15px rgb(59 130 246 / 0.5);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      transition: background-color 0.3s ease;
+      user-select: none;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .btn-email:hover,
+    .btn-email:focus-visible {
+      background-color: #2563eb;
+      outline: none;
+    }
+    .contact-info {
+      margin-top: 3rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: left;
+      color: #d1d5db;
+      user-select: text;
+    }
+    .contact-info h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: white;
+    }
+    .contact-info p {
+      margin: 0.25rem 0;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 1rem;
+    }
+    .contact-info p i {
+      min-width: 20px;
+      text-align: center;
+      color: #93c5fd;
+      flex-shrink: 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="logo-wrapper">
+        <div class="logo-bg">
+          <img src="https://img1.pixhost.to/images/5408/593724665_aetherbot.jpg" width="100" height="100" />
+        </div>
+        <h1>WA Bot Ryuki</h1>
+      </div>
+      <button id="burgerBtn" aria-label="Toggle menu" aria-expanded="false" aria-controls="navMenu">
+        <i class="fas fa-bars" aria-hidden="true"></i>
+      </button>
+      <nav id="navMenu" aria-label="Primary Navigation">
+        <ul>
+          <li><a href="#tentang" tabindex="0">Tentang</a></li>
+          <li><a href="#menu-bot" tabindex="0">Menu Bot</a></li>
+          <li><a href="#keunggulan" tabindex="0">Keunggulan</a></li>
+          <li><a href="#paket" tabindex="0">Paket Harga</a></li>
+          <li><a href="#kontak" tabindex="0">Kontak</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="tentang" aria-label="Tentang Bot WhatsApp Premium">
+    <div class="hero-container">
+      <div class="hero-text">
+        <h2>Bot WhatsApp <span>Premium</span></h2>
+        <p>Bot WhatsApp multifungsi dengan teknologi terkini. Sempurnakan grup dan bisnis Anda dengan fitur otomatis, hiburan, admin tools, dan AI assistant.</p>
+        <div class="hero-buttons">
+          <a href="#paket" class="btn-primary">Lihat Paket</a>
+          <a href="#demo" class="btn-secondary">Demo Bot</a>
+        </div>
+      </div>
+      <div class="hero-image-wrapper" aria-hidden="true">
+        <div class="hero-image-glow"></div>
+        <img class="hero-image" src="https://img1.pixhost.to/images/5408/593724665_aetherbot.jpg" width="300" height="600" />
+      </div>
+    </div>
+  </section>
+
+  <section id="menu-bot" aria-label="Menu Bot Premium">
+    <h2>Menu Bot <span>Premium</span></h2>
+    <div class="menu-grid">
+      <article class="menu-card" tabindex="0">
+        <div class="menu-card-header">
+          <div class="menu-icon"><i class="fas fa-robot" aria-hidden="true"></i></div>
+          <div>
+            <h3>Auto Responder</h3>
+            <p>Respon otomatis untuk keywords tertentu. Buat bot Anda menjawab pertanyaan umum.</p>
+          </div>
+        </div>
+        <img src="https://img1.pixhost.to/images/5408/593724665_aetherbot.jpg" width="400" height="200" />
+      </article>
+      <article class="menu-card" tabindex="0">
+        <div class="menu-card-header">
+          <div class="menu-icon"><i class="fas fa-download" aria-hidden="true"></i></div>
+          <div>
+            <h3>Media Downloader</h3>
+            <p>Download video & audio dari berbagai platform sosial media dengan sekali klik.</p>
+          </div>
+        </div>
+        <img src="https://img1.pixhost.to/images/5408/593724665_aetherbot.jpg" width="400" height="200" />
+      </article>
+      <article class="menu-card" tabindex="0">
+        <div class="menu-card-header">
+          <div class="menu-icon"><i class="fas fa-brain" aria-hidden="true"></i></div>
+          <div>
+            <h3>AI Assistant</h3>
+            <p>Fitur AI untuk menjawab pertanyaan, membuat konten, dan bantuan otomatis.</p>
+          </div>
+        </div>
+        <img src="https://img1.pixhost.to/images/5408/593724665_aetherbot.jpg" width="400" height="200" />
+      </article>
+      <article class="menu-card" tabindex="0">
+        <div class="menu-card-header">
+          <div class="menu-icon"><i class="fas fa-gamepad" aria-hidden="true"></i></div>
+          <div>
+            <h3>Game & Hiburan</h3>
+            <p>Berbagai game dan fitur hiburan untuk menghidupkan suasana grup WhatsApp.</p>
+          </div>
+        </div>
+        <img src="https://img1.pixhost.to/images/5408/593724665_aetherbot.jpg" width="400" height="200" />
+      </article>
+      <article class="menu-card" tabindex="0">
+        <div class="menu-card-header">
+          <div class="menu-icon"><i class="fas fa-user-shield" aria-hidden="true"></i></div>
+          <div>
+            <h3>Admin Tools</h3>
+            <p>Tools untuk admin grup seperti kick, add, promote, dan pengaturan grup lainnya.</p>
+          </div>
+        </div>
+        <img src="https://img1.pixhost.to/images/5408/593724665_aetherbot.jpg" width="400" height="200" />
+      </article>
+      <article class="menu-card" tabindex="0">
+        <div class="menu-card-header">
+          <div class="menu-icon"><i class="fas fa-image" aria-hidden="true"></i></div>
+          <div>
+            <h3>Sticker Maker</h3>
+            <p>Buat sticker WhatsApp dari gambar, video, atau GIF dengan mudah dan cepat.</p>
+          </div>
+        </div>
+        <img src="https://img1.pixhost.to/images/5408/593724665_aetherbot.jpg" width="400" height="200" />
+      </article>
+    </div>
+  </section>
+
+  <section id="keunggulan" aria-label="Keunggulan Bot Premium">
+    <h2>Keunggulan Bot <span>Premium</span></h2>
+    <div class="features-grid">
+      <article class="feature-card" tabindex="0">
+        <div class="feature-icon"><i class="fas fa-server" aria-hidden="true"></i></div>
+        <h3>Stabil & Cepat</h3>
+        <p>Online 24/7 nonstop dengan server premium. Response time cepat tanpa delay.</p>
+      </article>
+      <article class="feature-card" tabindex="0">
+        <div class="feature-icon"><i class="fas fa-tools" aria-hidden="true"></i></div>
+        <h3>Banyak Fitur</h3>
+        <p>Lebih dari 100 fitur yang terus diupdate. Dari hiburan, tools, hingga AI.</p>
+      </article>
+      <article class="feature-card" tabindex="0">
+        <div class="feature-icon"><i class="fas fa-headset" aria-hidden="true"></i></div>
+        <h3>Support 24/7</h3>
+        <p>Tim support aktif membantu setup, masalah teknis, dan update fitur baru.</p>
+      </article>
+      <article class="feature-card" tabindex="0">
+        <div class="feature-icon"><i class="fas fa-shield-alt" aria-hidden="true"></i></div>
+        <h3>Anti Banned</h3>
+        <p>Sistem anti-banned dan auto-reconnect saat terjadi gangguan.</p>
+      </article>
+      <article class="feature-card" tabindex="0">
+        <div class="feature-icon"><i class="fas fa-sync" aria-hidden="true"></i></div>
+        <h3>Update Rutin</h3>
+        <p>Update mingguan untuk fitur baru dan peningkatan performa.</p>
+      </article>
+      <article class="feature-card" tabindex="0">
+        <div class="feature-icon"><i class="fas fa-cogs" aria-hidden="true"></i></div>
+        <h3>Custom Fitur</h3>
+        <p>Request fitur custom sesuai kebutuhan spesifik Anda.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="paket" aria-label="Paket Harga Bot WhatsApp Premium">
+    <h2>Paket <span>Harga</span></h2>
+    <div class="paket-grid">
+      <article class="card" tabindex="0">
+        <div class="card-header">
+          <div class="card-icon" aria-hidden="true"><i class="fas fa-calendar-week"></i></div>
+          <h3>Paket Mingguan</h3>
+          <p class="duration">7 hari penggunaan penuh</p>
+        </div>
+        <p class="price">Rp20.000</p>
+        <p class="description">Cocok untuk event singkat</p>
+        <ul class="benefits" aria-label="Manfaat Paket Mingguan">
+          <li><i class="fas fa-check-circle" aria-hidden="true"></i>Akses semua fitur dasar</li>
+          <li><i class="fas fa-check-circle" aria-hidden="true"></i>Support 24/7</li>
+          <li><i class="fas fa-check-circle" aria-hidden="true"></i>Anti-banned system</li>
+          <li><i class="fas fa-check-circle" aria-hidden="true"></i>Auto-reconnect</li>
+          <li><i class="fas fa-check-circle" aria-hidden="true"></i>Bantuan setup</li>
+        </ul>
+        <a href="#kontak" class="btn-order">Pesan Sekarang</a>
+      </article>
+      <article class="card popular" tabindex="0">
+        <div class="card-header">
+          <div class="card-popular-label" aria-label="Terpopuler Paket">Terpopuler</div>
+          <div class="card-icon" aria-hidden="true"><i class="fas fa-calendar-alt"></i></div>
+          <h3>Paket Bulanan</h3>
+          <p class="duration">30 hari penggunaan penuh</p>
+        </div>
+        <p class="price">Rp50.000</p>
+        <p class="description">Paling direkomendasikan</p>
+        <ul class="benefits" aria-label="Manfaat Paket Bulanan">
+          <li><i class="fas fa-check-circle" aria-hidden="true"></i>Akses semua fitur premium</li>
+          <li><i class="fas fa-check-circle" aria-hidden="true"></i>Support 24/7 prioritas</li>
+          <li><i class="fas fa-check-circle" aria-hidden="true"></i>Update fitur mingguan</li>
+          <li><i class="fas fa-check-circle" aria-hidden="true"></i>Anti-banned system</li>
+          <li><i class="fas fa-check-circle" aria-hidden="true"></i>Panel kontrol bot</li>
+          <li><i class="fas fa-check-circle" aria-hidden="true"></i>1x request fitur custom</li>
+        </ul>
+        <a href="#kontak" class="btn-order">Pesan Sekarang</a>
+      </article>
+      <article class="card" tabindex="0">
+        <div class="card-header">
+          <div class="card-icon" aria-hidden="true"><i class="fas fa-calendar-check"></i></div>
+          <h3>Paket Tahunan</h3>
+          <p class="duration">365 hari penggunaan penuh</p>
+        </div>
+        <p class="price">Rp500.000</p>
+        <p class="description">Diskon 15% dari harga normal</p>
+        <ul class="benefits" aria-label="Manfaat Paket Tahunan">
+          <li><i class="fas fa-check-circle" aria-hidden="true"></i>Akses semua fitur premium+</li>
+          <li><i class="fas fa-check-circle" aria-hidden="true"></i>Support 24/7 VIP</li>
+          <li><i class="fas fa-check-circle" aria-hidden="true"></i>Update fitur mingguan</li>
+          <li><i class="fas fa-check-circle" aria-hidden="true"></i>Panel kontrol bot premium</li>
+          <li><i class="fas fa-check-circle" aria-hidden="true"></i>4x request fitur custom</li>
+          <li><i class="fas fa-check-circle" aria-hidden="true"></i>Promosi bisnis di halaman bot</li>
+          <li><i class="fas fa-check-circle" aria-hidden="true"></i>Bot backup gratis</li>
+        </ul>
+        <a href="#kontak" class="btn-order">Pesan Sekarang</a>
+      </article>
+    </div>
+  </section>
+
+  <section class="testimonial-section" aria-label="Testimonial Pengguna">
+    <h2>Apa Kata <span>Mereka?</span></h2>
+    <div class="testimonial-grid">
+      <article class="testimonial-card" tabindex="0">
+        <div class="testimonial-header">
+          <img src="https://img1.pixhost.to/images/5408/593724665_aetherbot.jpg" width="50" height="50" />
+          <div>
+            <h4>Ahmad Rizki</h4>
+            <p>Owner Grup Gaming</p>
+          </div>
+        </div>
+        <p class="testimonial-text">"Bot ini sangat membantu untuk manajemen grup gaming saya. Fitur admin tools dan hiburannya bikin member betah!"</p>
+        <div class="testimonial-stars" aria-label="Rating 5 bintang">
+          <i class="fas fa-star" aria-hidden="true"></i>
+          <i class="fas fa-star" aria-hidden="true"></i>
+          <i class="fas fa-star" aria-hidden="true"></i>
+          <i class="fas fa-star" aria-hidden="true"></i>
+          <i class="fas fa-star" aria-hidden="true"></i>
+        </div>
+      </article>
+      <article class="testimonial-card" tabindex="0">
+        <div class="testimonial-header">
+          <img src="https://img1.pixhost.to/images/5408/593724665_aetherbot.jpg" width="50" height="50" />
+          <div>
+            <h4>Sinta Dewi</h4>
+            <p>Admin Komunitas</p>
+          </div>
+        </div>
+        <p class="testimonial-text">"Responsif banget! Tim supportnya ramah dan selalu siap membantu. Auto-respon bikin komunikasi di grup jadi lebih efektif."</p>
+        <div class="testimonial-stars" aria-label="Rating 4.5 bintang">
+          <i class="fas fa-star" aria-hidden="true"></i>
+          <i class="fas fa-star" aria-hidden="true"></i>
+          <i class="fas fa-star" aria-hidden="true"></i>
+          <i class="fas fa-star" aria-hidden="true"></i>
+          <i class="fas fa-star-half-alt" aria-hidden="true"></i>
+        </div>
+      </article>
+      <article class="testimonial-card" tabindex="0">
+        <div class="testimonial-header">
+          <img src="https://img1.pixhost.to/images/5408/593724665_aetherbot.jpg" width="50" height="50" />
+          <div>
+            <h4>Budi Santoso</h4>
+            <p>Online Shop Owner</p>
+          </div>
+        </div>
+        <p class="testimonial-text">"Sempurna untuk bisnis online saya. Fitur auto-respon membantu jawab FAQ customer, jadi bisa fokus ke orderan yang lebih penting."</p>
+        <div class="testimonial-stars" aria-label="Rating 5 bintang">
+          <i class="fas fa-star" aria-hidden="true"></i>
+          <i class="fas fa-star" aria-hidden="true"></i>
+          <i class="fas fa-star" aria-hidden="true"></i>
+          <i class="fas fa-star" aria-hidden="true"></i>
+          <i class="fas fa-star" aria-hidden="true"></i>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="kontak" aria-label="Kontak dan Call to Action">
+    <div class="container">
+      <h2>Siap Upgrade Grup WhatsApp Anda?</h2>
+      <p class="lead">Hubungi kami sekarang dan nikmati pengalaman WhatsApp yang lebih baik dengan Bot Premium kami.</p>
+      <div class="contact-buttons">
+        <a href="https://wa.me/6281234567890" target="_blank" rel="noopener" class="btn-whatsapp" aria-label="Chat WhatsApp">
+          <i class="fab fa-whatsapp" aria-hidden="true" style="font-size: 1.5rem;"></i> Chat WhatsApp
+        </a>
+        <a href="mailto:info@wabotpremium.com" class="btn-email" aria-label="Kirim Email">
+          <i class="fas fa-envelope" aria-hidden="true" style="font-size: 1.25rem;"></i> Kirim Email
+        </a>
+      </div>
+      <div class="contact-info">
+        <h3>Kontak Kami</h3>
+        <p><i class="fas fa-phone-alt" aria-hidden="true"></i> +62 82126446272</p>
+        <p><i class="fas fa-envelope" aria-hidden="true"></i> info@wabotpremiumkai.com</p>
+        <p><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Jl. makmur No. 123, Jakarta, Indonesia</p>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const burgerBtn = document.getElementById('burgerBtn');
+    const navMenu = document.getElementById('navMenu');
+//chanell:https://whatsapp.com/channel/0029VanrndJICVfcrjFr3x2R//
+    function closeMenu() {
+      navMenu.classList.remove('open');
+      burgerBtn.setAttribute('aria-expanded', 'false');
+      burgerBtn.innerHTML = '<i class="fas fa-bars" aria-hidden="true"></i>';
+    }
+    function openMenu() {
+      navMenu.classList.add('open');
+      burgerBtn.setAttribute('aria-expanded', 'true');
+      burgerBtn.innerHTML = '<i class="fas fa-times" aria-hidden="true"></i>';
+    }
+//chanell:https://whatsapp.com/channel/0029VanrndJICVfcrjFr3x2R//
+    burgerBtn.addEventListener('click', () => {
+      if (navMenu.classList.contains('open')) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
+    });
+//chanell:https://whatsapp.com/channel/0029VanrndJICVfcrjFr3x2R//
+    navMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth < 768) {
+          closeMenu();
+        }
+      });
+    });
+//chanell:https://whatsapp.com/channel/0029VanrndJICVfcrjFr3x2R//
+    window.addEventListener('resize', () => {
+      if (window.innerWidth >= 768) {
+        navMenu.classList.remove('open');
+        burgerBtn.setAttribute('aria-expanded', 'false');
+        burgerBtn.innerHTML = '<i class="fas fa-bars" aria-hidden="true"></i>';
+      }
+    });
+  </script>
+</body>
+</html>
